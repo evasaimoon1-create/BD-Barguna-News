@@ -1,27 +1,80 @@
 
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BD Barguna News Admin</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f2f4f7;padding:20px}
+main{max-width:550px;margin:auto;background:white;padding:20px;border-radius:10px}
+input,textarea,button{width:100%;box-sizing:border-box;padding:12px;margin:8px 0}
+button{background:#087b42;color:white;border:0;border-radius:5px}
+</style>
 </head>
 <body>
-<h2>BD Barguna News - Admin Panel</h2>
-<p>সংবাদ প্রকাশের জন্য নিচের ফর্ম পূরণ করুন।</p>
-
-<form>
-  <p>সংবাদের শিরোনাম</p>
-  <input type="text" placeholder="শিরোনাম লিখুন" required>
-
-  <p>সংবাদের বিবরণ</p>
-  <textarea placeholder="বিস্তারিত লিখুন" required></textarea>
-
-  <p>ছবির লিংক</p>
-  <input type="url" placeholder="ছবির URL">
-
-  <p></p>
-  <button type="button" onclick="alert('এই ফর্মটি এখনো প্রকাশের ব্যবস্থার সঙ্গে যুক্ত হয়নি।')">সংবাদ প্রকাশ</button>
+<main>
+<h2>BD Barguna News — Admin Panel</h2>
+<form id="newsForm">
+<label>সংবাদের শিরোনাম</label>
+<input id="title" required>
+<label>বিভাগ</label>
+<input id="category" placeholder="বরগুনা">
+<label>সংবাদের বিবরণ</label>
+<textarea id="body" rows="8" required></textarea>
+<label>ছবির URL (ঐচ্ছিক)</label>
+<input id="image" type="url">
+<label>GitHub Token</label>
+<input id="token" type="password" required>
+<button type="submit">সংবাদ প্রকাশ করুন</button>
 </form>
+<p id="status"></p>
+</main>
+<script>
+const owner="mdsaimoon518-ship-it";
+const repo="BD-Barguna-News";
+const path="news.json";
+
+document.getElementById("newsForm").addEventListener("submit",async e=>{
+e.preventDefault();
+const status=document.getElementById("status");
+const token=document.getElementById("token").value.trim();
+status.textContent="প্রকাশ করা হচ্ছে...";
+try{
+const headers={
+"Authorization":"Bearer "+token,
+"Accept":"application/vnd.github+json",
+"X-GitHub-Api-Version":"2022-11-28"
+};
+const url=`https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+const response=await fetch(url,{headers});
+if(!response.ok) throw new Error("GitHub ফাইল পড়া যায়নি: "+response.status);
+const file=await response.json();
+const old=JSON.parse(decodeURIComponent(escape(atob(file.content.replace(/\n/g,"")))));
+old.unshift({
+title:document.getElementById("title").value,
+category:document.getElementById("category").value,
+body:document.getElementById("body").value,
+image:document.getElementById("image").value,
+date:new Date().toISOString()
+});
+const content=btoa(unescape(encodeURIComponent(JSON.stringify(old,null,2))));
+const save=await fetch(url,{
+method:"PUT",headers,
+body:JSON.stringify({
+message:"Publish news",
+content,
+sha:file.sha
+})
+});
+if(!save.ok) throw new Error("প্রকাশ হয়নি: "+save.status);
+status.textContent="সংবাদ news.json-এ সংরক্ষিত হয়েছে।";
+document.getElementById("newsForm").reset();
+}catch(err){
+status.textContent="সমস্যা: "+err.message;
+}
+});
+</script>
 </body>
 </html>
