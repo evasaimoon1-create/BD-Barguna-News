@@ -3,57 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BD Barguna News | বাংলা নিউজ পোর্টাল</title>
+<meta name="theme-color" content="#102a43">
+<meta name="description" content="BD Barguna News — বরগুনা, বাংলাদেশ ও বিশ্বের সর্বশেষ সংবাদ।">
+<title>BD Barguna News | বরগুনা ও দেশের সর্বশেষ সংবাদ</title>
 <style>
-:root{--red:#c8102e;--ink:#17202a;--muted:#667085;--line:#e7e9ee;--bg:#f5f6f8}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
-a{color:inherit;text-decoration:none}.top{background:#17202a;color:#fff;font-size:13px;padding:7px 5%}
-header{background:#fff;border-bottom:1px solid var(--line)}.head{max-width:1150px;margin:auto;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.logo{font-size:30px;font-weight:800;color:var(--red);letter-spacing:-1px}.tag{font-size:12px;color:var(--muted)}
-.search{display:flex;gap:6px}.search input{padding:10px 12px;border:1px solid var(--line);border-radius:6px;min-width:190px}.search button,.btn{background:var(--red);color:#fff;border:0;padding:10px 15px;border-radius:6px;cursor:pointer}
-nav{background:var(--red);color:#fff}.nav{max-width:1150px;margin:auto;padding:0 20px;display:flex;gap:0;overflow:auto;white-space:nowrap}.nav a{padding:12px 15px;font-weight:700;font-size:14px}.nav a:hover{background:#a50c25}
-main{max-width:1150px;margin:24px auto;padding:0 20px}.ticker{background:#fff;border:1px solid var(--line);padding:10px 14px;margin-bottom:20px;border-radius:7px;display:flex;gap:12px;align-items:center}.ticker b{background:var(--red);color:white;padding:4px 9px;border-radius:4px;white-space:nowrap}
-.section-title{font-size:21px;border-left:4px solid var(--red);padding-left:10px;margin:0 0 14px}
-.lead-grid{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-bottom:26px}.hero{background:#fff;border-radius:9px;overflow:hidden;border:1px solid var(--line)}.hero-img{height:285px;background:linear-gradient(135deg,#334155,#94a3b8);display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;font-weight:bold}.hero-body{padding:18px}.hero h1{font-size:26px;line-height:1.4;margin:5px 0 8px}.meta{color:var(--muted);font-size:12px}.side{display:grid;gap:12px}.side-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px}.side-card h3{font-size:16px;margin:4px 0}.label{color:var(--red);font-size:12px;font-weight:bold}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}.thumb{height:145px;background:linear-gradient(135deg,#64748b,#cbd5e1);display:flex;align-items:center;justify-content:center;color:#fff}.card-body{padding:13px}.card h3{font-size:17px;line-height:1.45;margin:5px 0 8px}.card p{font-size:13px;color:var(--muted);margin:0 0 8px}
-.columns{display:grid;grid-template-columns:2fr 1fr;gap:20px;margin-top:28px}.list-story{display:flex;gap:13px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px;margin-bottom:10px}.mini{width:105px;min-width:105px;height:78px;background:#cbd5e1;border-radius:5px;display:grid;place-items:center;color:#475569;font-size:12px}.list-story h3{font-size:16px;margin:2px 0 5px}.popular{background:#fff;border:1px solid var(--line);padding:15px;border-radius:8px}.popular ol{padding-left:22px;margin-bottom:0}.popular li{padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
-footer{background:#17202a;color:#fff;margin-top:40px;padding:28px 20px;text-align:center}.footer-inner{max-width:1150px;margin:auto}.footer-inner p{color:#cbd5e1;font-size:13px}
-@media(max-width:750px){.head{align-items:flex-start;flex-direction:column}.search{width:100%}.search input{flex:1;min-width:0}.lead-grid,.columns{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.hero-img{height:210px}.hero h1{font-size:21px}}
-@media(max-width:480px){.cards{grid-template-columns:1fr}.logo{font-size:26px}.nav a{padding:10px 12px}}
+:root{--navy:#102a43;--navy2:#183b56;--red:#d62839;--gold:#f4b942;--ink:#17212b;--muted:#687787;--line:#e7edf2;--paper:#fff;--bg:#f3f6f8;--shadow:0 10px 30px rgba(16,42,67,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Bengali",Arial,sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(1160px,calc(100% - 32px));margin:auto}
+.topbar{background:var(--navy);color:#eaf1f7;font-size:13px}.topbar .wrap{display:flex;justify-content:space-between;gap:12px;padding:7px 0;flex-wrap:wrap}
+.masthead{background:#fff}.masthead .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 0}.brand{display:flex;align-items:center;gap:12px;min-width:0}.mark{width:58px;height:58px;border-radius:17px;background:linear-gradient(145deg,var(--red),#a91528);display:grid;place-items:center;color:#fff;font-weight:900;font-size:20px;box-shadow:0 7px 18px #d6283930;flex:none}.brand h1{font-size:clamp(23px,4vw,32px);line-height:1.2;margin:0;color:var(--navy);letter-spacing:-.6px}.brand p{margin:4px 0 0;color:var(--muted);font-size:13px}.search{display:flex;max-width:360px;width:100%;gap:7px}.search input{width:100%;min-width:0;border:1px solid var(--line);border-radius:9px;padding:10px 13px;outline:none;background:#f8fafc}.search input:focus{border-color:var(--red)}.search button,.btn{border:0;border-radius:9px;padding:10px 16px;background:var(--red);color:#fff;font-weight:700;cursor:pointer}.search button:hover,.btn:hover{background:#b51e30}
+.navbar{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 4px 14px #102a4320}.nav{display:flex;overflow:auto;white-space:nowrap;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a{padding:12px 15px;font-size:14px;font-weight:700;border-bottom:3px solid transparent}.nav a:hover,.nav a.active{background:#ffffff12;border-bottom-color:var(--gold)}
+main{padding:22px 0 44px}.ticker{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:11px;padding:10px 14px;margin-bottom:22px;box-shadow:var(--shadow);overflow:hidden}.ticker strong{background:var(--red);color:#fff;border-radius:6px;padding:4px 10px;font-size:13px;white-space:nowrap}.ticker span{font-size:14px;color:#34495e}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:28px 0 14px}.section-head h2{font-size:21px;margin:0;color:var(--navy);border-left:4px solid var(--red);padding-left:11px}.section-head small{color:var(--muted)}
+.lead{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(260px,1fr);gap:17px}.hero,.side-item,.news-card,.popular,.empty{background:#fff;border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:var(--shadow)}.hero-art{min-height:275px;background:linear-gradient(125deg,#102a43,#245b78 58%,#d62839);display:flex;align-items:flex-end;padding:24px;color:#fff;position:relative;isolation:isolate}.hero-art:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 20%,#ffffff30,transparent 30%),linear-gradient(0deg,#071a2dcc,transparent 72%);z-index:-1}.hero-art .overline{font-size:12px;color:#ffe3a1;font-weight:800;letter-spacing:.5px}.hero-art h2{font-size:clamp(23px,4vw,34px);line-height:1.35;margin:7px 0 8px;max-width:680px}.hero-art p{margin:0;color:#e6edf2;font-size:14px}.hero-content{padding:17px 20px}.meta{font-size:12px;color:var(--muted)}.side-list{display:grid;gap:12px}.side-item{padding:15px}.tag{font-size:12px;color:var(--red);font-weight:800}.side-item h3{font-size:16px;line-height:1.5;margin:5px 0}.side-item p{font-size:13px;color:var(--muted);margin:0 0 7px}
+.news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.news-card{transition:transform .18s,box-shadow .18s}.news-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px #102a4320}.news-art{height:145px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:18px;background:linear-gradient(135deg,#1d526d,#83a9b8)}.news-art.local{background:linear-gradient(135deg,#155e4b,#76a98b)}.news-art.world{background:linear-gradient(135deg,#344c83,#8a9dc8)}.news-art.politics{background:linear-gradient(135deg,#6d3344,#c47b85)}.news-art.economy{background:linear-gradient(135deg,#73551c,#c5a35d)}.news-art.sports{background:linear-gradient(135deg,#315c35,#8dbb70)}.news-art.education{background:linear-gradient(135deg,#51417a,#a18fc8)}.news-art.entertainment{background:linear-gradient(135deg,#78456a,#d18eb9)}.news-body{padding:14px}.news-body h3{font-size:17px;line-height:1.45;margin:5px 0 7px}.news-body p{font-size:13px;color:var(--muted);margin:0 0 10px}
+.lower{display:grid;grid-template-columns:minmax(0,2fr) minmax(240px,1fr);gap:18px;margin-top:28px}.more-list{display:grid;gap:10px}.more-item{display:flex;align-items:center;gap:13px;background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px}.more-art{width:88px;height:72px;flex:none;border-radius:8px;display:grid;place-items:center;background:#e7eef4;color:var(--navy);font-weight:800;font-size:12px}.more-item h3{font-size:15px;line-height:1.4;margin:3px 0 4px}.popular{padding:16px}.popular ol{padding-left:22px;margin:8px 0 0}.popular li{padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}.popular li:last-child{border:0}
+.empty{padding:24px;text-align:center;color:var(--muted);grid-column:1/-1}.empty b{display:block;color:var(--navy);font-size:18px;margin-bottom:5px}
+footer{background:#0b2032;color:#fff;padding:30px 0 18px}.foot{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}.foot h2{font-size:22px;margin:0}.foot p{color:#c7d4df;font-size:13px;margin:5px 0}.copyright{border-top:1px solid #ffffff20;margin-top:20px;padding-top:14px;text-align:center;color:#aebdca;font-size:12px}
+@media(max-width:760px){.masthead .wrap{align-items:flex-start;flex-direction:column;gap:14px}.search{max-width:none}.lead,.lower{grid-template-columns:1fr}.hero-art{min-height:230px}.news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.side-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.wrap{width:min(100% - 22px,1160px)}.topbar .wrap{font-size:11px}.mark{width:49px;height:49px;border-radius:14px;font-size:17px}.brand p{font-size:12px}.news-grid,.side-list{grid-template-columns:1fr}.hero-art{min-height:215px;padding:18px}.hero-content{padding:14px}.news-art{height:130px}.section-head h2{font-size:19px}.more-art{width:72px;height:66px}}
 </style>
 </head>
 <body>
-<div class="top"><div style="max-width:1150px;margin:auto">মঙ্গলবার, ১০ নভেম্বর ২০২৬ · ঢাকা, বাংলাদেশ</div></div>
-<header><div class="head">
-  <div><div class="logo">BD Barguna News</div><div class="tag">বরগুনা ও দেশের সর্বশেষ সংবাদ</div></div>
-  <form class="search" onsubmit="event.preventDefault();filterNews()"><input id="q" placeholder="খবর খুঁজুন..." aria-label="খবর খুঁজুন"><button>খুঁজুন</button></form>
+<div class="topbar"><div class="wrap"><span id="today">আজকের তারিখ</span><span>বরগুনা, বাংলাদেশ</span></div></div>
+<header class="masthead"><div class="wrap">
+  <a class="brand" href="#" aria-label="BD Barguna News প্রচ্ছদ"><div class="mark">BD</div><div><h1>BD Barguna News</h1><p>বরগুনা ও দেশের সর্বশেষ সংবাদ</p></div></a>
+  <form class="search" id="searchForm" role="search"><input id="q" type="search" placeholder="খবর খুঁজুন..." aria-label="খবর খুঁজুন"><button type="submit">খুঁজুন</button></form>
 </div></header>
-<nav><div class="nav"><a href="#">প্রচ্ছদ</a><a href="#national">জাতীয়</a><a href="#local">সারাদেশ</a><a href="#world">আন্তর্জাতিক</a><a href="#politics">রাজনীতি</a><a href="#economy">অর্থনীতি</a><a href="#sports">খেলাধুলা</a><a href="#entertainment">বিনোদন</a></div></nav>
-<main>
-<div class="ticker"><b>সর্বশেষ</b><span>আপনার এলাকার গুরুত্বপূর্ণ খবর ও আপডেট পেতে চোখ রাখুন BD Barguna Newsে।</span></div>
-<section class="lead-grid">
- <article class="hero searchable"><div class="hero-img">প্রধান খবরের ছবি</div><div class="hero-body"><span class="label">প্রচ্ছদ · বিশেষ প্রতিবেদন</span><h1>আপনার শহর ও দেশের গুরুত্বপূর্ণ খবর সবার আগে জানুন</h1><p>এখানে প্রধান সংবাদের বিস্তারিত শিরোনাম, সংক্ষিপ্ত বিবরণ এবং প্রতিবেদকের তথ্য যুক্ত করুন।</p><div class="meta">প্রকাশ: ১০ নভেম্বর ২০২৬ · প্রতিবেদক: নিজস্ব প্রতিবেদক</div></div></article>
- <div class="side">
-  <article class="side-card searchable"><span class="label">জাতীয়</span><h3>দেশের সর্বশেষ খবর ও গুরুত্বপূর্ণ সিদ্ধান্ত এক নজরে</h3><div class="meta">১০ নভেম্বর ২০২৬</div></article>
-  <article class="side-card searchable"><span class="label">সারাদেশ</span><h3>জেলা-উপজেলার খবর জানতে সঙ্গে থাকুন</h3><div class="meta">১০ নভেম্বর ২০২৬</div></article>
-  <article class="side-card searchable"><span class="label">অর্থনীতি</span><h3>ব্যবসা-বাণিজ্য ও অর্থনীতির নতুন খবর</h3><div class="meta">১০ নভেম্বর ২০২৬</div></article>
- </div>
+<nav class="navbar" aria-label="প্রধান নেভিগেশন"><div class="wrap nav">
+<a class="active" href="#">প্রচ্ছদ</a><a href="#national">জাতীয়</a><a href="#local">বরগুনা</a><a href="#world">আন্তর্জাতিক</a><a href="#politics">রাজনীতি</a><a href="#economy">অর্থনীতি</a><a href="#sports">খেলাধুলা</a><a href="#entertainment">বিনোদন</a><a href="#education">শিক্ষা</a>
+</div></nav>
+<main class="wrap">
+<div class="ticker"><strong>সর্বশেষ</strong><span>বরগুনা ও দেশের গুরুত্বপূর্ণ খবর জানতে চোখ রাখুন BD Barguna News-এ।</span></div>
+<section class="lead" aria-label="প্রধান সংবাদ">
+<article class="hero searchable">
+<div class="hero-art"><div><div class="overline">BD BARGUNA NEWS · প্রধান সংবাদ</div><h2>বরগুনা ও দেশের খবর সবার আগে, নির্ভরযোগ্যভাবে</h2><p>স্থানীয় মানুষের কথা, এলাকার খবর এবং জাতীয় গুরুত্বপূর্ণ সংবাদ—এক জায়গায়।</p></div></div>
+<div class="hero-content"><span class="meta">স্বাগতম · BD Barguna News</span></div>
+</article>
+<div class="side-list">
+<article class="side-item searchable"><span class="tag">বরগুনা</span><h3>আপনার এলাকার সংবাদ ও জনদুর্ভোগের খবর</h3><p>বরগুনা জেলার ইউনিয়ন, উপজেলা ও শহরের খবর।</p><span class="meta">স্থানীয় সংবাদ</span></article>
+<article class="side-item searchable"><span class="tag">জাতীয়</span><h3>দেশের গুরুত্বপূর্ণ খবর ও সিদ্ধান্ত</h3><p>বাংলাদেশের চলমান ঘটনাপ্রবাহের আপডেট।</p><span class="meta">জাতীয় সংবাদ</span></article>
+<article class="side-item searchable"><span class="tag">সারাদেশ</span><h3>জেলা-উপজেলার নানা খবর</h3><p>সারা দেশের মানুষের জীবন ও উন্নয়নের খবর।</p><span class="meta">সারাদেশ</span></article>
+</div>
 </section>
-<section id="national"><h2 class="section-title">সর্বশেষ সংবাদ</h2><div class="cards" id="newsCards">
- <article class="card searchable"><div class="thumb">সংবাদের ছবি</div><div class="card-body"><span class="label">জাতীয়</span><h3>দেশের চলমান ঘটনাপ্রবাহ নিয়ে থাকছে নিয়মিত আপডেট</h3><p>সংবাদের সংক্ষিপ্ত বিবরণ এখানে লিখুন।</p><div class="meta">১০ নভেম্বর ২০২৬</div></div></article>
- <article class="card searchable" id="local"><div class="thumb">স্থানীয় খবরের ছবি</div><div class="card-body"><span class="label">সারাদেশ</span><h3>বরগুনাসহ各 জেলার স্থানীয় খবর প্রকাশ করুন</h3><p>স্থানীয় সংবাদ, জনদুর্ভোগ ও উন্নয়নসংক্রান্ত প্রতিবেদন।</p><div class="meta">১০ নভেম্বর ২০২৬</div></div></article>
- <article class="card searchable" id="world"><div class="thumb">বিশ্ব সংবাদ</div><div class="card-body"><span class="label">আন্তর্জাতিক</span><h3>বিশ্বের গুরুত্বপূর্ণ ঘটনাগুলোর খবর</h3><p>আন্তর্জাতিক সংবাদের সংক্ষিপ্ত বিবরণ এখানে দিন।</p><div class="meta">১০ নভেম্বর ২০২৬</div></div></article>
- <article class="card searchable" id="politics"><div class="thumb">রাজনীতির ছবি</div><div class="card-body"><span class="label">রাজনীতি</span><h3>রাজনীতি ও জনজীবনের খবর</h3><p>তথ্য যাচাই করে নিরপেক্ষ প্রতিবেদন প্রকাশ করুন।</p><div class="meta">১০ নভেম্বর ২০২৬</div></div></article>
- <article class="card searchable" id="economy"><div class="thumb">অর্থনীতির ছবি</div><div class="card-body"><span class="label">অর্থনীতি</span><h3>বাজার, চাকরি ও ব্যবসা-বাণিজ্যের খবর</h3><p>অর্থনীতি বিষয়ক সংক্ষিপ্ত বিবরণ এখানে দিন।</p><div class="meta">১০ নভেম্বর ২০২৬</div></div></article>
- <article class="card searchable" id="sports"><div class="thumb">খেলার ছবি</div><div class="card-body"><span class="label">খেলাধুলা</span><h3>দেশ-বিদেশের খেলাধুলার সর্বশেষ আপডেট</h3><p>খেলার খবর ও ফলাফল এখানে প্রকাশ করুন।</p><div class="meta">১০ নভেম্বর ২০২৬</div></div></article>
+<section id="national">
+<div class="section-head"><h2>সংবাদের বিভাগ</h2><small>বিভাগ বেছে খবর দেখুন</small></div>
+<div class="news-grid" id="newsGrid">
+<article class="news-card searchable" id="local"><div class="news-art local">বরগুনা</div><div class="news-body"><span class="tag">বরগুনা</span><h3>বরগুনার সর্বশেষ স্থানীয় সংবাদ</h3><p>এলাকার ঘটনা, জনদুর্ভোগ, উন্নয়ন ও মানুষের কথা।</p><span class="meta">বরগুনা বিভাগ</span></div></article>
+<article class="news-card searchable"><div class="news-art">জাতীয়</div><div class="news-body"><span class="tag">জাতীয়</span><h3>বাংলাদেশের গুরুত্বপূর্ণ সংবাদ</h3><p>দেশের নীতি, সিদ্ধান্ত ও চলমান ঘটনাপ্রবাহ।</p><span class="meta">জাতীয় বিভাগ</span></div></article>
+<article class="news-card searchable" id="world"><div class="news-art world">বিশ্ব</div><div class="news-body"><span class="tag">আন্তর্জাতিক</span><h3>বিশ্বের গুরুত্বপূর্ণ খবর</h3><p>দেশ-বিদেশের উল্লেখযোগ্য ঘটনা ও আপডেট।</p><span class="meta">আন্তর্জাতিক বিভাগ</span></div></article>
+<article class="news-card searchable" id="politics"><div class="news-art politics">রাজনীতি</div><div class="news-body"><span class="tag">রাজনীতি</span><h3>রাজনীতি ও জনজীবনের খবর</h3><p>তথ্য যাচাই ও নিরপেক্ষতার ভিত্তিতে সংবাদ।</p><span class="meta">রাজনীতি বিভাগ</span></div></article>
+<article class="news-card searchable" id="economy"><div class="news-art economy">অর্থনীতি</div><div class="news-body"><span class="tag">অর্থনীতি</span><h3>বাজার, চাকরি ও ব্যবসা-বাণিজ্য</h3><p>অর্থনীতি, কর্মসংস্থান ও বাজার পরিস্থিতি।</p><span class="meta">অর্থনীতি বিভাগ</span></div></article>
+<article class="news-card searchable" id="sports"><div class="news-art sports">খেলাধুলা</div><div class="news-body"><span class="tag">খেলাধুলা</span><h3>দেশ-বিদেশের খেলার খবর</h3><p>খেলার ফলাফল, আয়োজন ও গুরুত্বপূর্ণ আপডেট।</p><span class="meta">খেলাধুলা বিভাগ</span></div></article>
+<article class="news-card searchable" id="entertainment"><div class="news-art entertainment">বিনোদন</div><div class="news-body"><span class="tag">বিনোদন</span><h3>বিনোদন জগতের খবর ও আয়োজন</h3><p>চলচ্চিত্র, সংস্কৃতি ও বিনোদনের নানা খবর।</p><span class="meta">বিনোদন বিভাগ</span></div></article>
+<article class="news-card searchable" id="education"><div class="news-art education">শিক্ষা</div><div class="news-body"><span class="tag">শিক্ষা</span><h3>শিক্ষা ও ক্যাম্পাসের সংবাদ</h3><p>শিক্ষাপ্রতিষ্ঠান, পরীক্ষা ও শিক্ষার্থীদের খবর।</p><span class="meta">শিক্ষা বিভাগ</span></div></article>
+</div>
+</section>
+<div class="lower">
+<section><div class="section-head"><h2>আরও খবর</h2></div><div class="more-list">
+<article class="more-item searchable"><div class="more-art">ভিডিও</div><div><span class="tag">ভিডিও সংবাদ</span><h3>ভিডিও প্রতিবেদনের জন্য BD Barguna News-এর সঙ্গে থাকুন</h3><span class="meta">ভিডিও বিভাগ</span></div></article>
+<article class="more-item searchable"><div class="more-art">ছবি</div><div><span class="tag">ফটো সংবাদ</span><h3>ছবিতে বরগুনা ও দেশের নানা আয়োজন</h3><span class="meta">ফটো গ্যালারি</span></div></article>
 </div></section>
-<div class="columns"><section><h2 class="section-title">আরও খবর</h2>
- <article class="list-story searchable"><div class="mini">ছবি</div><div><span class="label">বিনোদন</span><h3 id="entertainment">বিনোদন জগতের নতুন খবর ও আয়োজন</h3><div class="meta">১০ নভেম্বর ২০২৬</div></div></article>
- <article class="list-story searchable"><div class="mini">ছবি</div><div><span class="label">শিক্ষা</span><h3>শিক্ষা ও ক্যাম্পাসের গুরুত্বপূর্ণ সংবাদ</h3><div class="meta">১০ নভেম্বর ২০২৬</div></div></article>
- </section><aside class="popular"><h2 class="section-title">জনপ্রিয়</h2><ol><li>BD Barguna News-এর আলোচিত খবর</li><li>সারাদেশের সর্বশেষ আপডেট</li><li>খেলাধুলার গুরুত্বপূর্ণ সংবাদ</li><li>অর্থনীতি ও বাজার পরিস্থিতি</li></ol></aside></div>
+<aside class="popular"><div class="section-head" style="margin-top:0"><h2>জনপ্রিয় বিভাগ</h2></div><ol><li><a href="#local">বরগুনার স্থানীয় সংবাদ</a></li><li><a href="#national">জাতীয় সংবাদ</a></li><li><a href="#sports">খেলাধুলা</a></li><li><a href="#economy">অর্থনীতি</a></li><li><a href="#education">শিক্ষা</a></li></ol></aside>
+</div>
 </main>
-<footer><div class="footer-inner"><div class="logo" style="color:#fff">BD Barguna News</div><p>সম্পাদক ও প্রকাশক: আপনার নাম · যোগাযোগ: আপনার ইমেইল/ফোন</p><p>© ২০২৬ BD Barguna News। সর্বস্বত্ব সংরক্ষিত।</p></div></footer>
+<footer><div class="wrap"><div class="foot"><div><h2>BD Barguna News</h2><p>বরগুনা ও দেশের সর্বশেষ সংবাদ</p></div><div><p>সম্পাদক ও প্রকাশক: [আপনার নাম]</p><p>যোগাযোগ: [আপনার ফোন/ইমেইল]</p></div></div><div class="copyright">© <span id="year"></span> BD Barguna News। সর্বস্বত্ব সংরক্ষিত।</div></div></footer>
 <script>
-function filterNews(){const q=document.getElementById('q').value.trim().toLowerCase();document.querySelectorAll('.searchable').forEach(el=>{el.style.display=(!q||el.innerText.toLowerCase().includes(q))?'':'none'})}
+const dateText = new Intl.DateTimeFormat('bn-BD',{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'Asia/Dhaka'}).format(new Date());
+document.getElementById('today').textContent = dateText + ' · ঢাকা, বাংলাদেশ';
+document.getElementById('year').textContent = new Intl.DateTimeFormat('en',{year:'numeric',timeZone:'Asia/Dhaka'}).format(new Date());
+document.getElementById('searchForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const q=document.getElementById('q').value.trim().toLocaleLowerCase('bn');
+ let shown=0;
+ document.querySelectorAll('.searchable').forEach(el=>{
+   const match=!q || el.innerText.toLocaleLowerCase('bn').includes(q);
+   el.hidden=!match;
+   if(match) shown++;
+ });
+ let note=document.getElementById('searchNote');
+ if(!note){note=document.createElement('p');note.id='searchNote';note.className='empty';document.getElementById('newsGrid').before(note)}
+ note.hidden=!q;
+ note.textContent=shown?'অনুসন্ধানের ফলাফল দেখানো হচ্ছে।':'দুঃখিত, এই শব্দে কোনো খবর পাওয়া যায়নি।';
+ if(!q) note.hidden=true;
+});
+document.getElementById('q').addEventListener('input',function(){if(!this.value.trim()){document.querySelectorAll('.searchable').forEach(el=>el.hidden=false);const n=document.getElementById('searchNote');if(n)n.hidden=true;}});
 </script>
-</body></html>
+</body>
+</html>
