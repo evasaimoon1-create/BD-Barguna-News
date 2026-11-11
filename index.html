@@ -25,7 +25,18 @@ footer{background:#17202a;color:#fff;margin-top:40px;padding:28px 20px;text-alig
 <body>
 <div class="top"><div style="max-width:1150px;margin:auto">মঙ্গলবার, ১০ নভেম্বর ২০২৬ · ঢাকা, বাংলাদেশ</div></div>
 <header><div class="head">
-  <div><div class="logo">BD Barguna News</div><div class="tag">বরগুনা ও দেশের সর্বশেষ সংবাদ</div></div>
+  <div style="display:flex;align-items:center;gap:12px">
+    <svg viewBox="0 0 64 64" style="width:65px;height:65px;flex-shrink:0">
+      <circle cx="32" cy="32" r="29" fill="#102b78" stroke="#c8102e" stroke-width="4"/>
+      <path d="M8 40 Q32 25 56 40 L56 49 Q32 36 8 49Z" fill="#1b9b52"/>
+      <text x="32" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="white">BD</text>
+      <text x="32" y="44" text-anchor="middle" font-size="8" font-weight="bold" fill="white">NEWS</text>
+    </svg>
+    <div>
+      <div class="logo">BD Barguna News</div>
+      <div class="tag">বরগুনা ও দেশের সর্বশেষ সংবাদ</div>
+    </div>
+  </div>
   <form class="search" onsubmit="event.preventDefault();filterNews()"><input id="q" placeholder="খবর খুঁজুন..." aria-label="খবর খুঁজুন"><button>খুঁজুন</button></form>
 </div></header>
 <nav><div class="nav"><a href="#">প্রচ্ছদ</a><a href="#national">জাতীয়</a><a href="#local">সারাদেশ</a><a href="#world">আন্তর্জাতিক</a><a href="#politics">রাজনীতি</a><a href="#economy">অর্থনীতি</a><a href="#sports">খেলাধুলা</a><a href="#entertainment">বিনোদন</a></div></nav>
